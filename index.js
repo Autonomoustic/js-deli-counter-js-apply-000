@@ -1,8 +1,8 @@
 var katzDeli = [];
-//var number = 1
-function takeANumber(katzDeliLine, number) {
+var number = 0
+
+function takeANumber(katzDeliLine) {
   // number increments by one
-  let number = 1
   number++
   katzDeliLine.push(number)
   return `Welcome, you are number ${number}`
