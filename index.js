@@ -1,12 +1,18 @@
 var katzDeli = [];
-
-function takeANumber(katzDeliLine, name) {
-  //katzDeliLine = ["Ali"]
-  //name = "Steven"
-  katzDeliLine.push(name)
-  //katzDeliLine = ["Ali", "Steven"]
-  return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`
+//var number = 1
+function takeANumber(katzDeliLine, number) {
+  // number increments by one
+  let number = 1
+  number++
+  katzDeliLine.push(number)
+  return `Welcome, you are number ${number}`
 }
+
+// takeANumber => 1
+// takeANumber => 2
+// takeANumber => 3
+// nowServing => 1
+// takeANumber => 4
 
 function nowServing(katzDeliLine) {
   //katzDeliLine = ["Ali", "Steven"]
@@ -15,7 +21,7 @@ function nowServing(katzDeliLine) {
   if (!katzDeliLine.length){
     return "There is nobody waiting to be served!"
   }
-  
+
   return `Currently serving ${katzDeliLine.shift()}.`
 
   //katzDeliLine = ["steve"]
